@@ -25,11 +25,13 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Score")]
     public int score;
-    public GameObject bar0;
-    public GameObject bar1;
-    public GameObject bar2;
-    public GameObject bar3;
+    public GameObject[] bars;
 
+    [Header("Timer")]
+    public bool startTimer;
+    public float timer = 10;
+    public float minTimer = 0;
+    public TextMeshProUGUI timerText;
 
     public static DialogueManager GetInstance()
     {
@@ -51,6 +53,18 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        if (startTimer)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        timerText.text = (timer).ToString("0");
+
+        if(timer < 0)
+        {
+            score++;
+            timer = 10;
+        }
 
         //handle continuing to next line in dialogue when submit is pressed
         //if (InputManager.GetInstance().GetSubmitPressed())
@@ -58,37 +72,9 @@ public class DialogueManager : MonoBehaviour
             ContinueStory();
         //}
 
-        if(score == 0)
-        {
-            bar0.SetActive(true);
-            bar1.SetActive(false);
-            bar2.SetActive(false);
-            bar3.SetActive(false);
-        }
+        DisplayBar();
 
-        if(score == 1)
-        {
-            bar0.SetActive(false);
-            bar1.SetActive(true);
-            bar2.SetActive(false);
-            bar3.SetActive(false);
-        }
 
-        if (score == 2)
-        {
-            bar0.SetActive(false);
-            bar1.SetActive(false);
-            bar2.SetActive(true);
-            bar3.SetActive(false);
-        }
-
-        if (score == 3)
-        {
-            bar0.SetActive(false);
-            bar1.SetActive(false);
-            bar2.SetActive(false);
-            bar3.SetActive(true);
-        }
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -112,6 +98,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = currentStory.Continue();
             //display choices (if any) for this dialogue line
             DisplayChoices();
+            startTimer = true;
         }
     }
 
@@ -137,5 +124,17 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        timer = 10;
+    }
+
+    public void DisplayBar()
+    {
+       
+        foreach (GameObject bar in bars)
+        {
+            bar.SetActive(false);
+        }
+        bars[score].SetActive(true);
+
     }
 }
