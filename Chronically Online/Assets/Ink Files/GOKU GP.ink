@@ -1,4 +1,5 @@
 VAR anger = 0
+VAR badending = false
 
 Hey! I saw a few of your streams, you look pretty strong. Have you watched DBZ?
 
@@ -71,13 +72,7 @@ Did you even watch the show!? He isn't in DBZ!
 
 ===Good4===
 You seem like a big fan of the show! I'm glad we were able to chat a bit, but I've got some stuff to do now! Chichi needs me to grab some groceries, and she's pretty mad!
-
 ->END
-
-
-
-
-
 
 ===BAD1===
 Huh!? You've never seen it!?
@@ -100,6 +95,4 @@ For real!? You're joking right!?
 ===Bad3===
 GRRR...YOU'LL PAY FOR THIS! YOU'LL PAAAAAAAAAAAAAAAAAAAAAAY!!!!
 ~ anger++
-
-
     -> END

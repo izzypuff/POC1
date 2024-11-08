@@ -1,4 +1,5 @@
 VAR anger = 0
+VAR badending = false
 
 H-Hey...
 
@@ -10,7 +11,6 @@ H-Hey...
 OMG Hi Clawdia, I'm your biggest fan.
 
 * Nice to meet you!
-~ anger--
 ->POS1
 
 * I get that a lot, lol.
@@ -22,7 +22,6 @@ OMG Hi Clawdia, I'm your biggest fan.
 N-nice to meet you too...
 
 * So, what's up?
-~ anger--
 -> POS2
 
 * Can I help you?
@@ -37,7 +36,6 @@ What!? N-no, I promise that I'm your biggest fan.
 ->BAD2
 
 * Well, thank you! I appriciate your dedication.
-~ anger--
 ~ anger--
 ->POS2
 
@@ -58,8 +56,6 @@ I was hoping we could become friends! I'm not weird or creepy like other guys.
 ->MID1
 
 * Sure! We can be friends.
-~ anger--
-~ anger--
 ->BOTTOM1
 
 
@@ -128,6 +124,7 @@ Oh awesome!! Would you want to VC sometime?
 
 ===DEATH1===
 Well, why limit it to discord? Let's VC irl!
+~ badending = true
 -> END
 
 ===TOP2===
@@ -327,4 +324,5 @@ ANSWERMEANSWERMEANSWERMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 ===DEATH4===
 Don't want to talk anymore? That makes me sad...why don't we sort this out in person?
 
+~ badending = true
     -> END

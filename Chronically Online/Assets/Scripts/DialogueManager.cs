@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
 
-    private Story currentStory;
+    public Story currentStory;
 
     private static DialogueManager instance;
 
@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Score")]
     public int score;
     public GameObject[] bars;
+    public bool badending = false;
 
     [Header("Timer")]
     public bool startTimer;
@@ -38,7 +39,7 @@ public class DialogueManager : MonoBehaviour
         return instance;
     }
 
-    private void Start()
+    public void Start()
     {
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -51,46 +52,70 @@ public class DialogueManager : MonoBehaviour
         EnterDialogueMode(InkJSONFile);
     }
 
-    private void Update()
+    public void Update()
     {
+        print(badending);
+
+        //if score is negative
+        if (score < 0)
+        {
+            //make score 0
+            score = 0;
+        }
+
+        //start choice timer
         if (startTimer)
         {
+            //decreasing timer
             timer -= Time.deltaTime;
         }
 
+        //set timer text to display time remaining
         timerText.text = (timer).ToString("0");
 
+        //if timer reaches 0
         if(timer < 0)
         {
+            //add to score
             score++;
+            //reset timer
             timer = 10;
         }
 
-        //handle continuing to next line in dialogue when submit is pressed
-        //if (InputManager.GetInstance().GetSubmitPressed())
-        //{
-            ContinueStory();
-        //}
+        //continue story
+        ContinueStory();
 
+        //display anger bar
         DisplayBar();
 
-
+        
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
 
+        //observe anger variable
         currentStory.ObserveVariable("anger", (variableName, newValue) =>
         {
-            score = (int) newValue;
+            score = (int)newValue;
         });
+
+        ////observe badending variable
+        //currentStory.ObserveVariable("badending", (variableName, newValue) =>
+        //{
+        //    badending = (bool)newValue;
+        //});
+        if(currentStory.variablesState["badending"] == "True")
+        {
+            print("bruh");
+        }
 
         ContinueStory();
     }
 
 
-    private void ContinueStory()
+    public void ContinueStory()
     {
         if (currentStory.canContinue)
         {
@@ -102,7 +127,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void DisplayChoices()
+    public void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
@@ -117,24 +142,28 @@ public class DialogueManager : MonoBehaviour
 
         for (int i = index; i < choices.Length; i++)
         {
+            //set choices to false
             choices[i].gameObject.SetActive(false);
         }
     }
 
     public void MakeChoice(int choiceIndex)
     {
+        //make choice based on index
         currentStory.ChooseChoiceIndex(choiceIndex);
+        //reset choice timer
         timer = 10;
     }
 
     public void DisplayBar()
     {
-       
+        //for each gameobject bar in the array
         foreach (GameObject bar in bars)
         {
+            //set the gameobject to inactive
             bar.SetActive(false);
         }
+        //set gameobject relating to score active
         bars[score].SetActive(true);
-
     }
 }
