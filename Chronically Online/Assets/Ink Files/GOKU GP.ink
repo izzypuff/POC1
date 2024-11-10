@@ -1,5 +1,6 @@
 VAR anger = 0
-VAR badending = false
+VAR badending = 0
+VAR goodending = 0
 
 Hey! I saw a few of your streams, you look pretty strong. Have you watched DBZ?
 
@@ -72,6 +73,7 @@ Did you even watch the show!? He isn't in DBZ!
 
 ===Good4===
 You seem like a big fan of the show! I'm glad we were able to chat a bit, but I've got some stuff to do now! Chichi needs me to grab some groceries, and she's pretty mad!
+~ goodending++
 ->END
 
 ===BAD1===

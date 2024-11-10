@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EboyLose.unity
     guid: 79599c80dd5aa45f2850f895e5ead828
+  - enabled: 1
+    path: Assets/Scenes/StalkerLose.unity
+    guid: ae306abd5065442698acb3e8a468897b
   m_configObjects: {}
