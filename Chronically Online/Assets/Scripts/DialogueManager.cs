@@ -24,7 +24,8 @@ public class DialogueManager : MonoBehaviour
     public TextAsset InkJSONFile;
 
     [Header("Score")]
-    private int score;
+    private int angerScore;
+    private int score = 0;
     public GameObject[] bars;
 
     [Header("Endings")]
@@ -60,12 +61,6 @@ public class DialogueManager : MonoBehaviour
 
     public void Update()
     {
-        //if score is negative
-        if (score < 0)
-        {
-            //make score 0
-            score = 0;
-        }
 
         //start choice timer
         if (startTimer)
@@ -76,15 +71,6 @@ public class DialogueManager : MonoBehaviour
 
         //set timer text to display time remaining
         timerText.text = (timer).ToString("0");
-
-        //if timer reaches 0
-        if(timer < 0)
-        {
-            //add to score
-            score++;
-            //reset timer
-            timer = 10;
-        }
 
         //if a ink story reaches good ending
         if(goodending == 1)
@@ -202,6 +188,23 @@ public class DialogueManager : MonoBehaviour
             //set the gameobject to inactive
             bar.SetActive(false);
         }
+
+        //if timer reaches 0
+        if (timer < 0)
+        {
+            //add to score
+            score++;
+            //reset timer
+            timer = 10;
+        }
+
+        //if score is negative
+        if (score < 0)
+        {
+            //set score to 0
+            score = 0;
+        }
+
         //set gameobject relating to score active
         bars[score].SetActive(true);
     }

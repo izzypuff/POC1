@@ -242,7 +242,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
+  m_fontSize: 35
   m_fontSizeBase: 52
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 40
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -845,17 +845,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3319331548795010394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1111112, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1746483268927430478}
+  m_Father: {fileID: 5667366182762285218}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1226.8, y: -18.099976}
-  m_SizeDelta: {x: 22.7497, y: 18.8477}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 37.4, y: -24.4}
+  m_SizeDelta: {x: 22.5132, y: 20.0518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8762526365049047945
 CanvasRenderer:
@@ -1495,7 +1495,6 @@ RectTransform:
   m_Children:
   - {fileID: 5667366182762285218}
   - {fileID: 1765328593113003163}
-  - {fileID: 7078792574104943732}
   - {fileID: 6994856666204381246}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1691,7 +1690,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 40
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -1900,7 +1899,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 40
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -2042,8 +2041,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.7411765, g: 0.827451, b: 0.95686275, a: 1}
     m_HighlightedColor: {r: 0.39215687, g: 0.44313726, b: 0.50980395, a: 1}
-    m_PressedColor: {r: 0.82745105, g: 0.8862746, b: 1, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.7411765, g: 0.827451, b: 0.95686275, a: 1}
+    m_SelectedColor: {r: 0.7411765, g: 0.827451, b: 0.95686275, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2325,8 +2324,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.7411765, g: 0.827451, b: 0.95686275, a: 1}
     m_HighlightedColor: {r: 0.39215687, g: 0.44313726, b: 0.50980395, a: 1}
-    m_PressedColor: {r: 0.82745105, g: 0.8862746, b: 1, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.7411765, g: 0.827451, b: 0.95686275, a: 1}
+    m_SelectedColor: {r: 0.7411765, g: 0.827451, b: 0.95686275, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2534,8 +2533,8 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.7411765, g: 0.827451, b: 0.95686275, a: 1}
     m_HighlightedColor: {r: 0.39168745, g: 0.43923894, b: 0.509434, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.7411765, g: 0.827451, b: 0.95686275, a: 1}
+    m_SelectedColor: {r: 0.7411765, g: 0.827451, b: 0.95686275, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2760,7 +2759,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7078792574104943732}
   m_Father: {fileID: 1746483268927430478}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
