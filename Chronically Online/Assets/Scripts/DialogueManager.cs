@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
 
-    [Header("Chocies UI")]
+    [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
 
@@ -26,7 +26,8 @@ public class DialogueManager : MonoBehaviour
     [Header("Score")]
     public int score;
     public GameObject[] bars;
-    public bool badending = false;
+    public int badending;
+    public int goodending;
 
     [Header("Timer")]
     public bool startTimer;
@@ -54,8 +55,6 @@ public class DialogueManager : MonoBehaviour
 
     public void Update()
     {
-        print(badending);
-
         //if score is negative
         if (score < 0)
         {
@@ -87,8 +86,6 @@ public class DialogueManager : MonoBehaviour
 
         //display anger bar
         DisplayBar();
-
-        
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -101,16 +98,19 @@ public class DialogueManager : MonoBehaviour
             score = (int)newValue;
         });
 
-        ////observe badending variable
-        //currentStory.ObserveVariable("badending", (variableName, newValue) =>
-        //{
-        //    badending = (bool)newValue;
-        //});
-        if(currentStory.variablesState["badending"] == "True")
+        //observe whether story has bad ending through int in ink
+        currentStory.ObserveVariable("badending", (variableName, newValue) =>
         {
-            print("bruh");
-        }
+            badending = (int)newValue;
+        });
 
+        //observe whether story has good ending through int in ink
+        currentStory.ObserveVariable("goodending", (variableName, newValue) =>
+        {
+            goodending = (int)newValue;
+        });
+
+        //continue the story
         ContinueStory();
     }
 

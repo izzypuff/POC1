@@ -1,5 +1,6 @@
 VAR anger = 0
-VAR badending = false
+VAR badending = 0
+VAR goodending = 0
 
 H-Hey...
 
@@ -124,7 +125,7 @@ Oh awesome!! Would you want to VC sometime?
 
 ===DEATH1===
 Well, why limit it to discord? Let's VC irl!
-~ badending = true
+~ badending++
 -> END
 
 ===TOP2===
@@ -284,6 +285,7 @@ W-What?
 
 ===REAL7===
 Oh, of course! I totally lost track of time from our chat. Well, I'll talk to you soon then! :-)
+~ goodending++
 -> END
 
 ===ELI1===
@@ -324,5 +326,5 @@ ANSWERMEANSWERMEANSWERMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 ===DEATH4===
 Don't want to talk anymore? That makes me sad...why don't we sort this out in person?
 
-~ badending = true
+~ badending++
     -> END

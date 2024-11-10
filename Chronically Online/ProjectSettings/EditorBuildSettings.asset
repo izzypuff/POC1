@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GokuLose.unity
     guid: ec4a6d7c59d67442aa162ff53708ca25
+  - enabled: 1
+    path: Assets/Scenes/EboyLose.unity
+    guid: 79599c80dd5aa45f2850f895e5ead828
   m_configObjects: {}
