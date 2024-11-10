@@ -4106,6 +4106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalBar: {fileID: 317696917}
   nextScene: GokuLose
+  badending: 0
   endTimer: 0
 --- !u!1 &1867695670 stripped
 GameObject:

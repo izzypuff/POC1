@@ -7,6 +7,7 @@ public class EndGame : MonoBehaviour
 {
     public GameObject finalBar;
     public string nextScene;
+    public bool badending;
 
     [Header("Timer")]
     public float endTimer = 0F;
@@ -20,7 +21,7 @@ public class EndGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (finalBar.activeSelf == true)
+        if ((finalBar.activeSelf == true) || (badending = true))
         {
             endTimer += Time.deltaTime;
         }
