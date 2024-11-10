@@ -24,15 +24,20 @@ public class DialogueManager : MonoBehaviour
     public TextAsset InkJSONFile;
 
     [Header("Score")]
-    public int score;
+    private int score;
     public GameObject[] bars;
-    public int badending;
-    public int goodending;
+
+    [Header("Endings")]
+    public GameObject Manager;
+    private int badending;
+    private int goodending;
+    private bool goodendingAdd = false;
+    private bool removeTimer = false;
 
     [Header("Timer")]
-    public bool startTimer;
-    public float timer = 10;
-    public float minTimer = 0;
+    private bool startTimer;
+    private float timer = 10;
+    private float minTimer = 0;
     public TextMeshProUGUI timerText;
 
     public static DialogueManager GetInstance()
@@ -79,6 +84,40 @@ public class DialogueManager : MonoBehaviour
             score++;
             //reset timer
             timer = 10;
+        }
+
+        //if a ink story reaches good ending
+        if(goodending == 1)
+        {
+            //stop timer
+            startTimer = false;
+            //increment goodending int in sep script
+            goodendingAdd = true;
+        }
+        
+        if(goodendingAdd == true)
+        {
+            //reset goodending variables
+            goodending = 0;
+            goodendingAdd = false;
+            //remove timer
+            removeTimer = true;
+            //add 1 to goodending in other script
+            Manager.GetComponent<WinGame>().goodending += 1;
+        }
+
+        //remove timer
+        if(removeTimer == true)
+        {
+            //get rid of timer text
+            timerText.text = "";
+        }
+
+        //if bad ending
+        if(badending == 1)
+        {
+            //bad ending bool in sep script is true, ending game
+            GetComponent<EndGame>().badending = true;
         }
 
         //continue story

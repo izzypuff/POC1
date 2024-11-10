@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndGame : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class EndGame : MonoBehaviour
     public string nextScene;
     public bool badending = false;
 
+ 
+
     [Header("Timer")]
-    public float endTimer = 0F;
+    private float endTimer = 0F;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,7 @@ public class EndGame : MonoBehaviour
     {
         if ((finalBar.activeSelf == true) || (badending == true))
         {
+            finalBar.SetActive(true);
             endTimer += Time.deltaTime;
         }
 
