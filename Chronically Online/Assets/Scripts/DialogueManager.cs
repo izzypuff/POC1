@@ -24,13 +24,12 @@ public class DialogueManager : MonoBehaviour
     public TextAsset InkJSONFile;
 
     [Header("Score")]
-    private int angerScore;
-    private int score = 0;
+    public int score = 0;
     public GameObject[] bars;
 
     [Header("Endings")]
     public GameObject Manager;
-    private int badending;
+    public int badending;
     private int goodending;
     private bool goodendingAdd = false;
     private bool removeTimer = false;
@@ -38,7 +37,6 @@ public class DialogueManager : MonoBehaviour
     [Header("Timer")]
     private bool startTimer;
     private float timer = 10;
-    private float minTimer = 0;
     public TextMeshProUGUI timerText;
 
     public static DialogueManager GetInstance()

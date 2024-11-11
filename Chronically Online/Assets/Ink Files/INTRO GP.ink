@@ -1,3 +1,7 @@
+VAR anger = 0
+VAR badending = 0
+VAR goodending = 0
+
 Hey klaus, how u doin?
 
  + [Been alr, just tired.]
@@ -53,4 +57,5 @@ I mean, u ARE lying to ur audience. U might want to rethink if this is what u re
 
 ===final===
 talk to u later Klaus! Be careful with ur fans btw...some of them seem kinda rabid lol.
+~ badending++
     -> END
