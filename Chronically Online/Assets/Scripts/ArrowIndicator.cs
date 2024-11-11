@@ -6,6 +6,7 @@ public class ArrowIndicator : MonoBehaviour
 {
     public GameObject arrow;
     private int endOfStory;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +24,7 @@ public class ArrowIndicator : MonoBehaviour
         {
             arrow.SetActive(true);
         }
+
+
     }
 }

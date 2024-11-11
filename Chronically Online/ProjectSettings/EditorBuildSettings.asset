@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StalkerLose.unity
     guid: ae306abd5065442698acb3e8a468897b
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 6a9849be563c540d8a5cf71ee5c9eccb
   m_configObjects: {}
