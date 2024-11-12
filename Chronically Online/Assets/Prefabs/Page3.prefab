@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 8459675251872355164}
   - component: {fileID: 1064621213810929611}
   - component: {fileID: 3909384984967270473}
-  - component: {fileID: 7717020696106582576}
+  - component: {fileID: 3513667268143557502}
   m_Layer: 5
   m_Name: Page3
   m_TagString: Page
@@ -1583,7 +1583,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
---- !u!114 &7717020696106582576
+  button: {fileID: 0}
+--- !u!114 &3513667268143557502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1595,7 +1596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421ffaccd29174d18b7e7946eacfc679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleBar: {fileID: 1746483268927430478}
+  titleBar: {fileID: 0}
   dragSpeed: 1
   dragFollowFactor: 0.5
 --- !u!1 &5616103054933728593

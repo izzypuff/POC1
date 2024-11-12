@@ -14,8 +14,11 @@ public class WindowController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public float dragFollowFactor = 0.5f;
 
     //zposition or layers of windows
-    private float selectedZPosition = -1.0f;
-    private float defaultZPosition = 0.0f;
+    private float selectedZPosition = 1.0f;
+    private float defaultZPosition = 2.0f;
+
+    //sfx
+    public AudioSource button;
 
     void Start()
     {
@@ -40,6 +43,8 @@ public class WindowController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         //set as top
         SetAsTopmostWindow();
+
+        button.Play();
 
         //check pointer is on dragging bar
         if (eventData.pointerCurrentRaycast.gameObject == titleBar.gameObject)

@@ -57,5 +57,5 @@ I mean, u ARE lying to ur audience. U might want to rethink if this is what u re
 
 ===final===
 talk to u later Klaus! Be careful with ur fans btw...some of them seem kinda rabid lol.
-~ badending++
+~ goodending++
     -> END

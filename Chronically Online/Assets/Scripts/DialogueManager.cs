@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Endings")]
     public GameObject Manager;
     public int badending;
-    private int goodending;
+    public int goodending;
     private bool goodendingAdd = false;
     private bool removeTimer = false;
 

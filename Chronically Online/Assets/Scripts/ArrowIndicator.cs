@@ -18,7 +18,7 @@ public class ArrowIndicator : MonoBehaviour
     {
         GetComponent<DialogueManager>().score = 0;
 
-        endOfStory = GetComponent<DialogueManager>().badending;
+        endOfStory = GetComponent<DialogueManager>().goodending;
 
         if(endOfStory == 1)
         {
