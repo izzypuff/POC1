@@ -1018,6 +1018,10 @@ PrefabInstance:
       propertyPath: m_text
       value: friend
       objectReference: {fileID: 0}
+    - target: {fileID: 3513667268143557502, guid: d63c1a88f48ce4eff8f1d484e0cbb3ad, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 591231146}
     - target: {fileID: 3845100738275035694, guid: d63c1a88f48ce4eff8f1d484e0cbb3ad, type: 3}
       propertyPath: m_Sprite
       value: 
